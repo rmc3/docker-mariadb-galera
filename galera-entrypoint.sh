@@ -33,4 +33,8 @@ if [ -n "$WSREP_NODE_ADDRESS" ]; then
   echo wsrep_node_address="${WSREP_NODE_ADDRESS}" >> /etc/mysql/conf.d/galera-auto-generated.cnf
 fi
 
+if [ -n "${WSREP_SST_RECEIVE_ADDRESS}" ]; then
+  echo wsrep_sst_receive_address="${WSREP_SST_RECEIVE_ADDRESS}" >> /etc/mysql/conf.d/galera-auto-generated.cnf
+fi
+
 exec /docker-entrypoint.sh "$@"

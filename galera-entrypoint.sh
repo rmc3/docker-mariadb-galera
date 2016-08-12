@@ -12,6 +12,9 @@ export MYSQL_ALLOW_EMPTY_PASSWORD="yes"
 
 cat <<- EOF > /etc/mysql/conf.d/galera-auto-generated.cnf
 # Galera Cluster Auto Generated Config
+[mysqld]
+innodb_log_file_size=2048M
+
 [server]
 bind-address="0.0.0.0"
 binlog_format="row"

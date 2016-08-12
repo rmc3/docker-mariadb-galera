@@ -14,6 +14,7 @@ cat <<- EOF > /etc/mysql/conf.d/galera-auto-generated.cnf
 # Galera Cluster Auto Generated Config
 [mysqld]
 innodb_log_file_size=2048M
+max_allowed_packet=1073741824
 
 [server]
 bind-address="0.0.0.0"

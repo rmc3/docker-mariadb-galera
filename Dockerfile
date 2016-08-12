@@ -1,4 +1,4 @@
-FROM mariadb:10.1
+FROM mariadb:10.1.16
 
 RUN apt-get update && apt-get install -y galera-arbitrator-3 && \
     rm -rf /var/lib/apt/lists/*
